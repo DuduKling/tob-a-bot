@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/DuduKling/tob-a-bot.git",
   "author": "Eduardo Mesiano <eduardokmesiano@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
