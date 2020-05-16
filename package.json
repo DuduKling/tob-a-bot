@@ -1,0 +1,9 @@
+{
+  "name": "tob-a-bot",
+  "version": "0.0.1",
+  "description": "Tob a bot",
+  "main": "index.js",
+  "repository": "https://github.com/DuduKling/tob-a-bot.git",
+  "author": "Eduardo Mesiano <eduardokmesiano@gmail.com>",
+  "license": "MIT"
+}
