@@ -6,6 +6,10 @@
   "repository": "https://github.com/DuduKling/tob-a-bot.git",
   "author": "Eduardo Mesiano <eduardokmesiano@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",

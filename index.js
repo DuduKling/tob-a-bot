@@ -14,8 +14,10 @@ app.post('/post', (req, res) => {
     res.send('Post World!');
 });
 
-const serverPort = 3000;
-app.listen(serverPort, (err) => {
+const PORT = process.env.PORT || 5000;
+const HOSTNAME = '127.0.0.1';
+
+app.listen(PORT, (err) => {
     if(err) console.error('Server :: Something went wrong')
-    else console.log(`Server :: Listening on port ${serverPort}`);
+    else console.log(`Server :: Listening on port http://${HOSTNAME}:${PORT}`);
 })
