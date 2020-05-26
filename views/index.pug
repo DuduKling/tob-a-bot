@@ -5,15 +5,54 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel='stylesheet', href='/css/reset.css')
         link(rel='stylesheet', href='/css/styles.css')
+        link(rel='shortcut icon', href='/assets/robot.png', type='image/x-icon')
         title #{name} a bot
-    body
-        header
+
+    body.wrapper
+        header.header
+            nav.nav
+                h1.logo
+                    a(href='#', title='Site title')  Tob, a Bot
+
+            div.avatar
+                img(src='./assets/tob.png', alt='Bot Icon')
+
+                p.hidden Icons made by 
+                    a(href='https://www.flaticon.com/authors/freepik' title='Freepik') Freepik
+                    | from 
+                    a(href='https://www.flaticon.com/' title='Flaticon')
+                    | www.flaticon.com
+
             h1 Hi, I'm #{name}!
             h2 A bot like any other
 
-        content
-            h3 Wanna hear something important?
-            p #{joke}
+        content.content
+            div.scroll v
 
-        footer
-            p Made with S2 by Dudu 
+            div.info
+                h3 What is tob?
+                p Tob is a Bot
+
+            div.info
+                h3 What does he do?
+                p He talks about some stuff
+
+            div.info
+                h3 Why he was created?
+                p Because I decided to make a simple project
+
+            div.info
+                h3 Wanna hear something nice?
+                p #{joke}
+
+            div.info
+                h3 How do I talk to Tob?
+                p I don't know yet
+
+        footer.footer
+            p Made with 
+                span &#9829; 
+                | by 
+                a(href='https://dudukling.github.io/', title='Author site') Dudu
+                span  ☺ 
+                | 2020

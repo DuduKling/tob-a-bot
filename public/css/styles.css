@@ -1,3 +1,162 @@
-body {
+.wrapper {
     background-color: lightgray;
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    width: 100%;
+    height:  calc(100vh - 50px);
+    color: #323b5b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header > .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 50px;
+    background-color: #323b5b;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header > .nav > .logo {
+    /* width: 100px; */
+    height: 100%;
+    margin-left: 20px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header > .nav > .logo a {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+    color: lightgray;
+    font-weight: bold;
+}
+
+.header > .nav > .logo a:hover {
+    color: lightgray;
+}
+
+.header > .avatar {
+    width: 250px;
+    height: 110px;
+
+    margin-bottom: 30px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background-color: lightgray;
+
+    transition: height .5s ease, background-color .5s .3s ease-out;
+}
+
+.header > .avatar:hover {
+    height: 250px;
+    background-color: orange;
+    /* transform: rotateY(180deg); */
+}
+
+.header > .avatar > img {
+    width: 100%;
+}
+
+
+.header > h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.content {
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: orange;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content > .scroll {
+    position: absolute;
+    top: 18px;
+
+    color: #323b5b;
+    font-weight: bold;
+}
+
+.content > .info {
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > .info > h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    color: #323b5b;
+}
+
+.content > .info > p {
+    color: #323b5b;
+}
+
+.footer {
+    width: 100%;
+    height: 30px;
+    background-color: #323b5b;
+
+    font-size: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > p {
+    color: lightgrey;
+}
+
+.footer > p > span {
+    color: orange;
+}
+
+.footer > p > a {
+    color: lightgray;
+    /* text-decoration: none; */
 }
