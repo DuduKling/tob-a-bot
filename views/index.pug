@@ -10,12 +10,14 @@ html(lang='en')
 
     body.wrapper
         header.header
+            img(src='https://picsum.photos/1080/720?grayscale&blur=2', alt='Random Icon').backgroundImage
+
             nav.nav
                 h1.logo
                     a(href='#', title='Site title')  Tob, a Bot
 
             div.avatar
-                img(src='./assets/tob.png', alt='Bot Icon')
+                img(src='./assets/tob.png', alt='Bot Icon').avatarImage
 
                 p.hidden Icons made by 
                     a(href='https://www.flaticon.com/authors/freepik' title='Freepik') Freepik
@@ -27,27 +29,32 @@ html(lang='en')
             h2 A bot like any other
 
         content.content
-            div.scroll v
+            div.scroll 
+                svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24").scrollIcon
+                    path(d="M12 2c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6s-6-2.691-6-6v-8c0-3.309 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8v8c0 4.418 3.582 8 8 8s8-3.582 8-8v-8c0-4.418-3.582-8-8-8zm0 9c-.829 0-1.5-.672-1.5-1.5s.671-1.5 1.5-1.5 1.5.672 1.5 1.5-.671 1.5-1.5 1.5z")
+                svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24").arrowIcon
+                    path(d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z")
 
-            div.info
-                h3 What is tob?
-                p Tob is a Bot
+            div.infoContainer
+                div.info
+                    h3 What is tob?
+                    p Tob is a Bot
 
-            div.info
-                h3 What does he do?
-                p He talks about some stuff
+                div.info
+                    h3 What does he do?
+                    p He talks about some stuff
 
-            div.info
-                h3 Why he was created?
-                p Because I decided to make a simple project
+                div.info
+                    h3 Why he was created?
+                    p Because I decided to make a simple project
 
-            div.info
-                h3 Wanna hear something nice?
-                p #{joke}
+                div.info
+                    h3 Wanna hear something nice?
+                    p #{joke}
 
-            div.info
-                h3 How do I talk to Tob?
-                p I don't know yet
+                div.info
+                    h3 How do I talk to Tob?
+                    p I don't know yet
 
         footer.footer
             p Made with 

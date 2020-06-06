@@ -11,20 +11,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 
-// Homepage
-app.get('/', (req, res) =>
-    res.render('index', {
-        name: 'Tob',
-        joke: 'Chuck Norris flosses his teeth with barbed wire.',
-    })
-);
-
-
-// API
-app.post('/post', (req, res) => {
-    console.log(req.body);
-    res.send('Post World!');
-});
+// Routes
+app.use('/', require('./routes/homepage'));
+app.use('/webhook', require('./routes/webhook'));
 
 
 // Server
