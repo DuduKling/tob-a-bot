@@ -1,0 +1,19 @@
+# Documentação:
+# https://core.telegram.org/bots/api
+
+@token = XXXXXXXXXX:1234567890123456789012-123456789012
+@webhook = https://tob-a-bot.herokuapp.com/webhook/telegram
+
+###
+
+POST https://api.telegram.org/bot{{token}}/setWebhook HTTP/1.1
+content-type: application/json
+
+{
+    "url": "{{webhook}}",
+    "max_connections": "10"
+}
+
+###
+
+POST https://api.telegram.org/bot{{token}}/getWebhookInfo HTTP/1.1
