@@ -6,7 +6,8 @@ const Helper = require("../model/helper");
 
 // API
 router.post('/dialogflow', (req, res) => {
-    console.log(`Webhook :: ${req.body}`);
+    console.log(`DialogFlow Webhook :: ${JSON.stringify(req)}`);
+    console.log(`DialogFlow Webhook :: ${JSON.stringify(req.body)}`);
 
     const message = req.body.queryResult.queryText;
     const intent = req.body.queryResult.intent.displayName;
@@ -30,7 +31,7 @@ router.post('/dialogflow', (req, res) => {
 });
 
 router.post('/telegram', (req, res) => {
-    console.log(`Telegram Webhook :: ${req}`);
+    console.log(`Telegram Webhook :: ${JSON.stringify(req)}`);
 
     res.send(200);
 });

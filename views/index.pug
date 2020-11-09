@@ -6,6 +6,7 @@ html(lang='en')
         link(rel='stylesheet', href='/css/reset.css')
         link(rel='stylesheet', href='/css/styles.css')
         link(rel='shortcut icon', href='/assets/robot.png', type='image/x-icon')
+        script(src='/js/front.js')
         title #{name} a bot
 
     body.wrapper
@@ -30,10 +31,10 @@ html(lang='en')
 
         content.content
             div.scroll 
-                svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24").scrollIcon
-                    path(d="M12 2c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6s-6-2.691-6-6v-8c0-3.309 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8v8c0 4.418 3.582 8 8 8s8-3.582 8-8v-8c0-4.418-3.582-8-8-8zm0 9c-.829 0-1.5-.672-1.5-1.5s.671-1.5 1.5-1.5 1.5.672 1.5 1.5-.671 1.5-1.5 1.5z")
-                svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24").arrowIcon
-                    path(d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z")
+                svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24').scrollIcon
+                    path(d='M12 2c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6s-6-2.691-6-6v-8c0-3.309 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8v8c0 4.418 3.582 8 8 8s8-3.582 8-8v-8c0-4.418-3.582-8-8-8zm0 9c-.829 0-1.5-.672-1.5-1.5s.671-1.5 1.5-1.5 1.5.672 1.5 1.5-.671 1.5-1.5 1.5z')
+                svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24').arrowIcon
+                    path(d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z')
 
             div.infoContainer
                 div.info
@@ -55,6 +56,22 @@ html(lang='en')
                 div.info
                     h3 How do I talk to Tob?
                     p I don't know yet
+
+        div.botConversationContainer
+            button(type='button' onclick='toggleChat()').chatButton
+                img(
+                    src='./assets/robot.png',
+                    alt='Bot Icon'
+                )
+            div.chatContainer
+                p.speechBubble
+                    | Talk to me here!
+                div.chatIframeContainer.hide
+                    div.iframeContainer
+                        iframe(
+                            allow='microphone;'
+                            src='https://console.dialogflow.com/api-client/demo/embedded/7c479830-3c0c-4472-8fd6-45adff4a9e81'
+                        )
 
         footer.footer
             p Made with 

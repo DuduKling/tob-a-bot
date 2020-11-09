@@ -146,7 +146,7 @@
 @keyframes animateTranslation {
     from {transform: translateY(0px);}
     to {transform: translateY(-3px);}
-}   
+}
 
 .content > .infoContainer {
     width: 70%;
@@ -173,6 +173,113 @@
     color: #323b5b;
     text-align: center;
 }
+
+
+.botConversationContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.botConversationContainer > .chatButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.botConversationContainer > .chatButton > img {
+    width: 75px;
+    height: 75px;
+    z-index: 1;
+}
+
+.botConversationContainer > .chatContainer {
+    position: relative;
+    background: white;
+    border-radius: .4em;
+    z-index: 2;
+
+    margin-bottom: 10px;
+    margin-right: -5px;
+}
+
+.botConversationContainer > .chatContainer:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: white;
+    border-right: 0;
+    margin-top: -10px;
+    margin-right: -10px;
+    z-index: 2;
+}
+
+.botConversationContainer > .chatContainer .hide {
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.botConversationContainer > .chatContainer > p {
+    width: 150px;
+    height: 40px;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botConversationContainer > .chatContainer > div {
+    position: relative;
+    background-color: white;
+
+    border-radius: 20px;
+    position: relative;
+
+    transition: all 1s .5s ease;
+}
+
+.botConversationContainer > .chatContainer > div > .iframeContainer {
+    width: 350px;
+    height: 320px;
+
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.botConversationContainer > .chatContainer > div > .iframeContainer > iframe {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 350px;
+    height: 430px;
+}
+
 
 .footer {
     width: 100%;
