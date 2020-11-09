@@ -5,7 +5,7 @@ const Model = require("../model");
 const Helper = require("../model/helper");
 
 // API
-router.post('/', (req, res) => {
+router.post('/dialogflow', (req, res) => {
     console.log(`Webhook :: ${req.body}`);
 
     const message = req.body.queryResult.queryText;
@@ -27,6 +27,12 @@ router.post('/', (req, res) => {
     response = Helper.formatResponse(response);
 
     res.send(response);
+});
+
+router.post('/telegram', (req, res) => {
+    console.log(`Telegram Webhook :: ${req}`);
+
+    res.send(200);
 });
 
 module.exports = router;
